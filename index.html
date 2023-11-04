@@ -1,1 +1,156 @@
-<!DOCTYPE html><html><head><meta name='viewport'content='width=device-width,initial-scale=1.0'><style>.b1,.b2{background-color:white;border:1px solid;border-radius:5px;padding:5px 10px}.b2{margin:5px}hr{border:0;border-top:1px solid black}a,u{text-decoration:none;}a{color:green}details{border:1px solid;border-radius:5px;padding:3px 6px}details>summary{list-style-type:'+ '}details[open]>summary{list-style-type:'- '}ul>li{margin:0}.c{display:flex;flex-wrap:wrap}.h{display:flex,flex-direction:column}.i{margin:10px auto}body{font-size:15px}</style></head><body><center style='font-size:30px'>mihn</center><hr><a href='/tuan.html'><button class='b1'>xem tuần</button></a><hr><div class='c'><div><a href='https://www.facebook.com/profile.php?id=61550923088728&mibextid=9R9pXO'target=_blank><button class='b2'>facebook</button></a></div><div><a href='https://matrix.to/#/@minh:matrix.im'target=_blank><button class='b2'>@minh:matrix.im</button></a></div><div><a href='xmpp:minh@xmpp.jp'><button class='b2'>minh@xmpp.jp</button></a></div></div><hr><div class='h'><div class='i'><details><summary>facebook là gì?</summary><ul><li>mạng xã hội phổ biến</li><li><a href='https://www.facebook.com'>xem thêm</a></li></ul></details></div><div class='i'><details><summary>matrix là gì?</summary><ul><li>một giao thức mở và phi tập trung cho phép trò chuyện an toàn</li><li><a href='https://matrix.org'>xem thêm</a></li></ul></details></div><div class='i'><details><summary>xmpp là gì?</summary><ul><li>tiêu chuẩn mở cho nhắn tin</li><li><a href='https://xmpp.org'>xem thêm</a></li></ul></details></div></div></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<style>
+			div.heading {
+				background-color: black;
+				display: flex;
+				flex: 90%;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+			}
+			p.heading {
+				color: white;
+				font-size: 20px;
+				padding: 10px;
+				margin: 0;
+			}
+			div.menu {
+				border: 1px solid;
+				border-radius: 5px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				padding: 5px 0;
+				margin: 5px;
+			}
+			button.menu-item {
+				border: 1px solid;
+				border-radius: 5px;
+				background-color: white;
+				margin: 0 3px;
+				padding: 5px 10px;
+			}
+			div.body {
+				border: 1px solid;
+				border-radius: 5px;
+				background-color: white;
+				margin: 5px;
+			}
+			div.connection {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				margin: 5px;
+			}
+			button.facebook, button.matrix, button.xmpp {
+				background-color: white;
+				border: 1px solid;
+				border-radius: 5px;
+				margin: 0 5px;
+				padding: 5px 10px;
+			}
+			button.facebook {
+				order: 1
+			}
+			button.matrix {
+				order: 2
+			}
+			button.xmpp {
+				order: 3
+			}
+			div.answer {
+				margin: 5px;
+				display: flex;
+				flex-direction: column;
+			}
+			details.answer {
+				border: 1px solid;
+				border-radius: 5px;
+				margin: 5px;
+				padding: 5px 10px;
+			}
+			span.answer-border {
+				border-bottom: 1px solid green;
+				margin: 0;
+				padding: 1px;
+			}
+			/* tag styling */
+			a, u {
+				text-decoration: none;
+			}
+			a {
+				color: green;
+			}
+			body {
+				font-size: 15px;
+				margin: 0px;
+				padding: 0px;
+			}
+			details > summary {
+				list-style-type: '+';
+			}
+			details[open] > summary {
+				list-style-type: '-';
+			}
+		</style>
+	</head>
+	<body>
+		<div class='heading'>
+			<p class='heading'>mihn</p>
+		</div>
+		<div class='menu'>
+			<a href='/tuan.html'>
+				<button class='menu-item'>xem tuần</button>
+			</a>
+		</div>
+		<div class='body'>
+			<div class='connection'>
+				<a href='https://www.facebook.com/profile.php?id=61550923088728&mibextid=9R9pXO' target=_blank>
+					<button class='facebook'>facebook</button>
+				</a>
+				<a href='https://matrix.to/#/@minh:matrix.im' target=_blank>
+					<button class='matrix'>@minh:matrix.im</button>
+				</a>
+				<a href='xmpp:minh@xmpp.jp'>
+					<button class='xmpp'>minh@xmpp.jp</button>
+				</a>
+			</div>
+			<div class='answer'>
+				<details open class='answer'>
+					<summary>
+						<span class='answer-border'>facebook</span> là gì?
+					</summary>
+					<ul>
+						<li>mạng xã hội phổ biến</li>
+						<li><a href='https://www.facebook.com' target=_blank>trang chủ của facebook</a></li>
+					</ul>
+				</details>
+				<details open class='answer'>
+					<summary>
+						<span class='answer-border'>@minh:matrix.im</span> là gì?
+					</summary>
+					<ul>
+						<li>là địa chỉ <span class='answer-border'>matrix</span> trên máy chủ <span class='answer-border'>matrix.im</span> với tên người dùng <span class='answer-border'>minh</span></li>
+						<li><span class='answer-border'>matrix.im</span> là một máy chủ nhà <span>matrix</span></li>
+						<li><span class='answer-border'>matrix</span> là một giao thức nhắn tin bảo mật, phi tập trung, miễn phí và mã nguồn mở</li>
+						<li><a href='https://matrix.org' target=_blank>thêm về matrix</a></li>
+					</ul>
+				</details>
+				<details open class='answer'>
+					<summary>
+						<span class='answer-border'>minh@xmpp.jp</span> là gì?
+					</summary>
+					<ul>
+						<li>là địa chỉ <span class='answer-border'>xmpp</span> trên máy chủ <span class='answer-border'>xmpp.jp</span> với tên người dùng <span class='answer-border'>minh</span></li>
+						<li><span class='answer-border'>xmpp.jp</span> là một máy chủ <span class='answer-border'>xmpp</span></li>
+						<li><span class='answer-border'>xmpp</span> là một giao thức nhắn tin phi tập trung, miễn phí và mã nguồn mở</li>
+						<li><a href='https://xmpp.org' target=_blank>thêm về xmpp</a></li>
+					</ul>
+				</details>
+			</div>
+		</div>
+	</body>
+</html>
