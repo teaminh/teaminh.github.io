@@ -1,1 +1,68 @@
-<!DOCTYPE html><html><head><meta name='viewport'content='width=device-width,initial-scale=1.0'><style>button{border:1px solid;border-radius:5px;background-color:white;padding:5px 10px}hr{border:0;border-top:1px solid}.d{border:1px solid;border-radius:5px;background-color:white;padding:10px auto;}</style></head><body onload="let t=[new Date(),new Date(2023,7,27)].map(d=>new Date(d.toLocaleString('en-US',{timezone:'Asia/Jarkata'})));t=(t[0]-t[1])/604800000;t=t-t%1;document.getElementById('t').innerText=`tuần ${t} (${t%2?'lẻ':'chẵn'})\nchiều ${t%2?3:4} tiết`"><a href='/'><button>quay về</button></a><hr><div class='d'><center><noscript>không bật kịch bản/script/javascript thì chịu</noscript><p id='t'></p></center></div></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<style>
+			div.heading {
+				background-color: black;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			a.heading {
+				margin: 10px;
+			}
+			button.heading{
+				border: 1px solid;
+				/*border-radius: 5px;*/
+				background-color: white;
+				padding: 5px 10px;
+			}
+			div.body {
+				border: 1px solid;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 5px;
+				padding: 15px;
+				text-align: center;
+			}
+			div.separator {
+				border: 1px solid;
+				margin: 5px;
+				padding: 5px;
+			}
+			/* tag styling */
+			body {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const div = document.getElementsByClassName('body')[0];
+				const [now, then] = [
+					new Date(),
+					new Date(2023,7,27)
+				].map(date => new Date(date.toLocaleString('en-US', { timezone: 'Asia/Jarkata' })));
+				const [hour, minute] = [now.getHours(), now.getMinutes()].map(x => String(x).padStart(2, 0));
+				const today = now.getDay();
+				const dw = [0, 'hai', 'ba', 'tư', 'năm', 'sáu', 'bảy'];
+				const [date, month, year] = [now.getDate(), now.getMonth() + 1, now.getFullYear()];
+				const week = Math.floor((now - then) / 604800000);
+				div.innerHTML = `<div class='separator'>${hour}:${minute} - ${today ? 'thứ '.concat(dw[today]) : 'chủ nhật'}, ${date} tháng ${month}, ${year}</div><div class='separator'>${today ? 'tuần này là tuần '.concat(week) : 'tuần sau là tuần '.concat(week)} - ${week % 2 ? 'lẻ' : 'chẵn' }<br/>chiều thứ hai học ${week % 2 ? 3 : 4} tiết</div>`;
+			}, false);
+		</script>
+		<div class='heading'>
+			<a class='heading' href='/'>
+				<button class='heading'>quay về</button>
+			</a>
+		</div>
+		<div class='body'>
+			<noscript>không bật kịch bản/script/javascript thì chịu</noscript>
+		</div>
+	</body>
+</html>

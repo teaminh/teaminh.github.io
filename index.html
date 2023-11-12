@@ -6,7 +6,6 @@
 			div.heading {
 				background-color: black;
 				display: flex;
-				flex: 90%;
 				flex-direction: column;
 				justify-content: center;
 				text-align: center;
@@ -28,54 +27,63 @@
 			}
 			button.menu-item {
 				border: 1px solid;
-				border-radius: 5px;
+				/*border-radius: 5px;*/
 				background-color: white;
 				margin: 0 3px;
 				padding: 5px 10px;
 			}
 			div.body {
 				border: 1px solid;
-				border-radius: 5px;
+				border-radius: 10px;
 				background-color: white;
 				margin: 5px;
+				padding: 5px;
 			}
 			div.connection {
+				margin: 5px;
+			}
+			div.connection-container {
+				border: 1px solid;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: flex-start;
 				margin: 5px;
+				padding: 5px;
 			}
-			button.facebook, button.matrix, button.xmpp {
+			button.connection {
 				background-color: white;
 				border: 1px solid;
 				border-radius: 5px;
-				margin: 0 5px;
+				margin: 5px;
 				padding: 5px 10px;
 			}
-			button.facebook {
-				order: 1
-			}
-			button.matrix {
-				order: 2
-			}
-			button.xmpp {
-				order: 3
-			}
 			div.answer {
+				align-item: stretch;
 				margin: 5px;
 				display: flex;
 				flex-direction: column;
 			}
 			details.answer {
 				border: 1px solid;
-				border-radius: 5px;
+			/*	border-radius: 5px;*/
 				margin: 5px;
 				padding: 5px 10px;
 			}
-			span.answer-border {
+			span.green_underline {
 				border-bottom: 1px solid green;
 				margin: 0;
 				padding: 1px;
+			}
+			div.centered-title {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+			}
+			p.centered-title {
+				font-size: 15px;
+				font-weight: 500;
+				margin: 5px;
 			}
 			/* tag styling */
 			a, u {
@@ -99,7 +107,7 @@
 	</head>
 	<body>
 		<div class='heading'>
-			<p class='heading'>mihn</p>
+			<p class='heading'>minh</p>
 		</div>
 		<div class='menu'>
 			<a href='/tuan.html'>
@@ -108,46 +116,55 @@
 		</div>
 		<div class='body'>
 			<div class='connection'>
+			<div class='centered-title'>
+				<p class='centered-title'>liên kết ngoài</p>
+			</div>
+			<div class='connection-container'>
 				<a href='https://www.facebook.com/profile.php?id=61550923088728&mibextid=9R9pXO' target=_blank>
-					<button class='facebook'>facebook</button>
+					<button class='connection'>facebook</button>
 				</a>
-				<a href='https://matrix.to/#/@minh:matrix.im' target=_blank>
-					<button class='matrix'>@minh:matrix.im</button>
+				<a href='https://github.com/teaminh' target=_blank>
+					<button class='connection'>github</button>
 				</a>
-				<a href='xmpp:minh@xmpp.jp'>
-					<button class='xmpp'>minh@xmpp.jp</button>
+				<a href='https://matrix.to/#/@mihn:nitro.chat' target=_blank>
+					<button class='connection'>@mihn:nitro.chat</button>
+				</a>
+				<a href='xmpp:minh@xmpp.gg'>
+					<button class='connection'>minh@xmpp.gg</button>
 				</a>
 			</div>
+			</div>
 			<div class='answer'>
+			<div class='centered-title'>
+				<p class='centered-title'>giải thích</p>
+			</div>
 				<details open class='answer'>
 					<summary>
-						<span class='answer-border'>facebook</span> là gì?
+						<a href='https://github.com/' target=_blank>github</a> là gì?
 					</summary>
 					<ul>
-						<li>mạng xã hội phổ biến</li>
-						<li><a href='https://www.facebook.com' target=_blank>trang chủ của facebook</a></li>
+						<li><a href='https://vi.wikipedia.org/wiki/GitHub' target=_blank>xem trên wikipedia</a></li>
+						<li>trang này được host trên github pages ;)</li>
 					</ul>
 				</details>
 				<details open class='answer'>
 					<summary>
-						<span class='answer-border'>@minh:matrix.im</span> là gì?
+						@mihn:nitro.chat là gì?
 					</summary>
 					<ul>
-						<li>là địa chỉ <span class='answer-border'>matrix</span> trên máy chủ <span class='answer-border'>matrix.im</span> với tên người dùng <span class='answer-border'>minh</span></li>
-						<li><span class='answer-border'>matrix.im</span> là một máy chủ nhà <span>matrix</span></li>
-						<li><span class='answer-border'>matrix</span> là một giao thức nhắn tin bảo mật, phi tập trung, miễn phí và mã nguồn mở</li>
-						<li><a href='https://matrix.org' target=_blank>thêm về matrix</a></li>
+						<li>địa chỉ <a href='https://matrix.org' target=_blank>matrix</a> tại <a href='https://nitro.chat' target=_blank>nitro.chat</a> tên là <span class='green_underline'>mihn</span></li>
+						<li><a href='https://nitro.chat' target=_blank>nitro.chat</a> là một máy chủ <a href='https://matrix.org' target=_blank>matrix</a></li>
+						<li><a href='https://matrix.org' target=_blank>matrix</a> là giao thức nhắn tin bảo mật, phi tập trung, tự do và mã nguồn mở</li>
 					</ul>
 				</details>
 				<details open class='answer'>
 					<summary>
-						<span class='answer-border'>minh@xmpp.jp</span> là gì?
+						minh@xmpp.gg là gì?
 					</summary>
 					<ul>
-						<li>là địa chỉ <span class='answer-border'>xmpp</span> trên máy chủ <span class='answer-border'>xmpp.jp</span> với tên người dùng <span class='answer-border'>minh</span></li>
-						<li><span class='answer-border'>xmpp.jp</span> là một máy chủ <span class='answer-border'>xmpp</span></li>
-						<li><span class='answer-border'>xmpp</span> là một giao thức nhắn tin phi tập trung, miễn phí và mã nguồn mở</li>
-						<li><a href='https://xmpp.org' target=_blank>thêm về xmpp</a></li>
+						<li>địa chỉ <a href='https://xmpp.org' target=_blank>xmpp</a>/<a href='https://www.jabber.org' target=_blank>jabber</a> tại <a href='https://xmpp.gg' target=_blank>xmpp.gg</a> tên là <span class='green_underline'>minh</span></li>
+						<li><a href='https://xmpp.gg' target=_blank>xmpp.gg</a> là một máy chủ <a href='https://xmpp.org' target=_blank>xmpp</a>/<a href='https://www.jabber.org' target=_blank>jabber</a></li>
+						<li><a href='https://xmpp.org' target=_blank>xmpp</a>/<a href='https://www.jabber.org' target=_blank>jabber</a> là giao thức nhắn tin và hiện diện trực tuyến, phi tập trung, tự do và mã nguồn mở. <a href='https://vi.wikipedia.org/wiki/XMPP' target=_blank>xem thêm trên wikipedia</a></li>
 					</ul>
 				</details>
 			</div>
