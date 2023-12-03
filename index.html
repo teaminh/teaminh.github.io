@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<title>minh</title>
 		<style>
 			div.heading {
 				background-color: black;
@@ -25,9 +26,8 @@
 				padding: 5px 0;
 				margin: 5px;
 			}
-			button.menu-item {
+			input.menu-item {
 				border: 1px solid;
-				/*border-radius: 5px;*/
 				background-color: white;
 				margin: 0 3px;
 				padding: 5px 10px;
@@ -50,7 +50,7 @@
 				margin: 5px;
 				padding: 5px;
 			}
-			button.connection {
+			input.connection {
 				background-color: white;
 				border: 1px solid;
 				border-radius: 5px;
@@ -58,14 +58,12 @@
 				padding: 5px 10px;
 			}
 			div.answer {
-				align-item: stretch;
 				margin: 5px;
 				display: flex;
 				flex-direction: column;
 			}
 			details.answer {
 				border: 1px solid;
-			/*	border-radius: 5px;*/
 				margin: 5px;
 				padding: 5px 10px;
 			}
@@ -110,9 +108,9 @@
 			<p class='heading'>minh</p>
 		</div>
 		<div class='menu'>
-			<a href='/tuan.html'>
-				<button class='menu-item'>xem tuần</button>
-			</a>
+			<form action='/tuan.html'>
+				<input type='submit' value='xem tuần' class='menu-item'>
+			</form>
 		</div>
 		<div class='body'>
 			<div class='connection'>
@@ -120,18 +118,18 @@
 				<p class='centered-title'>liên kết ngoài</p>
 			</div>
 			<div class='connection-container'>
-				<a href='https://www.facebook.com/profile.php?id=61550923088728&mibextid=9R9pXO' target=_blank>
-					<button class='connection'>facebook</button>
-				</a>
-				<a href='https://github.com/teaminh' target=_blank>
-					<button class='connection'>github</button>
-				</a>
-				<a href='https://matrix.to/#/@mihn:nitro.chat' target=_blank>
-					<button class='connection'>@mihn:nitro.chat</button>
-				</a>
-				<a href='xmpp:minh@xmpp.gg'>
-					<button class='connection'>minh@xmpp.gg</button>
-				</a>
+				<form action='https://www.facebook.com/profile.php?id=61550923088728&mibextid=9R9pXO' target=_blank>
+					<input type='submit' value='facebook' class='connection'>
+				</form>
+				<form action='https://github.com/teaminh' target=_blank>
+					<input type='submit' value='github' class='connection'>
+				</form>
+				<form action='https://matrix.to/#/@mihn:nitro.chat' target=_blank>
+					<input type='submit' value='@mihn:nitro.chat' class='connection'>
+				</form>
+				<form action='xmpp:minh@xmpp.gg' target=_blank>
+					<input type='submit' value='minh@xmpp.gg' class='connection'>
+				</form>
 			</div>
 			</div>
 			<div class='answer'>
